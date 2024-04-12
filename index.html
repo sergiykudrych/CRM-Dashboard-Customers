@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="files/style.css" />
+    <link rel="stylesheet" href="css/nullstyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="title" content="" />
+    <title>CRM-Dashboard-Customers</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="dashboard__navigation navigation">
+        <!-- Logo -->
+        <a class="navigation__logo" href="/"
+          ><img src="img/logo.svg" alt="Logo CRM Dashboard Customers" /> <span class="text">Dashboard</span> <span>v.01</span></a
+        >
+        <!-- Navigation in site -->
+        <nav class="navigation-list">
+          <ul>
+            <li>
+              <a href="/" class="icon-key-square"> <span class="text-link">Dashboard</span></a>
+            </li>
+            <li>
+              <a href="/" class="icon-d-square-1"><span class="text-link">Product</span> <span class="icon-arrow"></span></a>
+            </li>
+            <li>
+              <a href="/" class="icon-user-square-1 active"><span class="text-link">Customers</span> <span class="icon-arrow"></span></a>
+            </li>
+            <li>
+              <a href="/" class="icon-wallet-money-2"><span class="text-link">Income</span> <span class="icon-arrow"></span></a>
+            </li>
+            <li>
+              <a href="/" class="icon-discount-shape-1"><span class="text-link">Promote</span> <span class="icon-arrow"></span></a>
+            </li>
+            <li>
+              <a href="/" class="icon-message-question-1"><span class="text-link">Help</span> <span class="icon-arrow"></span></a>
+            </li>
+          </ul>
+        </nav>
+        <!-- User Info -->
+        <div class="user">
+          <img src="img/profile.png" alt="Profile User" />
+          <div class="user__info">
+            <a href="/" class="user__info-name">Evano</a>
+            <span class="user__info-post">Project Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard__main">
+        <div class="hello">Hello <span class="hello-name">Evano</span>👋🏼,</div>
+
+        <section class="dashboard__main-panel panel">
+          <div class="panel-container">
+            <div class="panel__header">
+              <div class="panel__header-text">
+                <h1 class="title">All Customers</h1>
+                <p class="subtitle">Active Members</p>
+              </div>
+              <div class="search"><button class="icon-search-1"></button><input id="searchInput" type="text" placeholder="Search" /></div>
+            </div>
+            <div class="table visible" style="overflow-x: auto">
+              <!-- Таблиця з даними -->
+              <table class="panel__data" id="contactsTable">
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Company</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body"></tbody>
+              </table>
+            </div>
+            <div class="panel__footer">
+              <span>Showing data 1 to 8 of 256K entries</span>
+              <div class="panel__footer-pagination pagination"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
